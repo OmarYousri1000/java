@@ -3,6 +3,10 @@ name: Java CI
 on:
   workflow_dispatch:
 
+concurrency:
+  group: java-pipeline
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
